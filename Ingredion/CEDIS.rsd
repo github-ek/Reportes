@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>eConnectDS</DataSourceReference>
+      <CommandText>SELECT a.id_bodega, a.codigo, a.nombre
+FROM eConnect.dbo.bodegas a
+INNER JOIN eConnect.dbo.ciudades b
+ON a.id_ciudad = b.id_ciudad
+INNER JOIN eConnect.dbo.departamentos c
+ON b.id_departamento = c.id_departamento
+INNER JOIN eConnect.dbo.paises d
+ON c.id_pais = d.id_pais
+WHERE a.activo = 1
+AND d.nombre = 'COLOMBIA'</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="id_bodega">
+        <DataField>id_bodega</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+      <Field Name="codigo">
+        <DataField>codigo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

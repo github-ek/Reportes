@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Description />
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>eConnetDS</DataSourceReference>
+      <CommandText>SELECT 
+	a.periodo
+	,a.planta
+	,a.id_externo AS 'NUMERO_ACTA'
+	,a.id_solicitud_acta
+	,a.integracion
+	,a.estado_solicitud
+	
+	,c.codigo AS 'CLIENTE'
+	
+	,a.id_bodega
+	
+	,b.codigo
+	,b.nombre AS 'BODEGA EGAKAT'
+
+	,a.bodega_codigo_alterno AS 'BODEGA FT1'
+	,a.tercero_nombre
+                   ,a.centro_zonal
+	,a.fecha_minima_solicitada
+	,a.fecha_maxima_solicitada
+	,d.nombre
+	,a.direccion
+	,a.punto_nombre_alterno
+	,a.responsable_principal
+	,a.responsable_suplente
+	,a.telefono
+	,a.ordnum AS 'NUMERO DE ORDEN EGAKAT'
+	,a.wh_id AS 'BODEGA_DESPACHO'
+	,a.fecha_creacion
+	,a.fecha_modificacion
+FROM 
+	dbo.solicitudes_actas_ingredion a
+	INNER JOIN dbo.bodegas b
+	ON a.id_bodega = b.id_bodega
+	INNER JOIN dbo.clientes c
+	ON a.id_cliente = c.id_cliente
+	INNER JOIN dbo.ciudades d
+	ON a.id_ciudad = d.id_ciudad
+ORDER BY
+	a.estado_solicitud</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="periodo">
+        <DataField>periodo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="planta">
+        <DataField>planta</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="NUMERO_ACTA">
+        <DataField>NUMERO_ACTA</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="id_solicitud_acta">
+        <DataField>id_solicitud_acta</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+      <Field Name="integracion">
+        <DataField>integracion</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="estado_solicitud">
+        <DataField>estado_solicitud</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="CLIENTE">
+        <DataField>CLIENTE</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="id_bodega">
+        <DataField>id_bodega</DataField>
+        <rd:TypeName>System.Int64</rd:TypeName>
+      </Field>
+      <Field Name="codigo">
+        <DataField>codigo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="BODEGA_EGAKAT">
+        <DataField>BODEGA EGAKAT</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="BODEGA_FT1">
+        <DataField>BODEGA FT1</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="tercero_nombre">
+        <DataField>tercero_nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="fecha_minima_solicitada">
+        <DataField>fecha_minima_solicitada</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="fecha_maxima_solicitada">
+        <DataField>fecha_maxima_solicitada</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="nombre">
+        <DataField>nombre</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="direccion">
+        <DataField>direccion</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="punto_nombre_alterno">
+        <DataField>punto_nombre_alterno</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="centro_zonal">
+        <DataField>centro_zonal</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="responsable_principal">
+        <DataField>responsable_principal</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="responsable_suplente">
+        <DataField>responsable_suplente</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="telefono">
+        <DataField>telefono</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="NUMERO_DE_ORDEN_EGAKAT">
+        <DataField>NUMERO DE ORDEN EGAKAT</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="BODEGA_DESPACHO">
+        <DataField>BODEGA_DESPACHO</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="fecha_creacion">
+        <DataField>fecha_creacion</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="fecha_modificacion">
+        <DataField>fecha_modificacion</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Tactic_stage">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=172.31.48.15;Initial Catalog=TACTIC_STAGE</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>f879af04-edb1-4476-a15c-e00cd17b60c2</DataSourceID>
+</RptDataSource>

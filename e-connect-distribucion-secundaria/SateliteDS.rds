@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SateliteDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=192.168.10.15;Initial Catalog=Satelite</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>b6e1142c-4b0b-4427-9a13-510f3e07e1ba</DataSourceID>
+</RptDataSource>

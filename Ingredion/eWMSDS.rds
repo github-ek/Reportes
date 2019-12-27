@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="eWMSDS">
+  <ConnectionProperties>
+    <Extension>SQL</Extension>
+    <ConnectString>Data Source=172.31.48.15;Initial Catalog=eWMS</ConnectString>
+  </ConnectionProperties>
+  <DataSourceID>cb1a118a-5a66-46e4-81b8-42821c3f06bf</DataSourceID>
+</RptDataSource>
